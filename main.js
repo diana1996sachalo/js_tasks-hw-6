@@ -6,7 +6,7 @@ function printTimeout(str, n) {
     clearTimeout(timer);
   }, n);
 }
-console.log( printTimeout('hello', 1000) ); // hello will appear after 10secs in console)
+console.log( printTimeout('hello', 10000) ); // hello will appear after 10secs in console)
 
  // task 2
 
@@ -120,9 +120,9 @@ function filterUsersByMonth(users, month) {
 
 function getAdultNames(users) {
 
-   function calculateAge(birthday) { // birthday is a date
+   function calculateAge(birthday) { 
      var ageDifMs = Date.now() - birthday.getTime();
-     var ageDate = new Date(ageDifMs); // miliseconds from epoch
+     var ageDate = new Date(ageDifMs); 
      return Math.abs(ageDate.getUTCFullYear() - 1970);
    }
 	return users.map(user => {
